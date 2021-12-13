@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import "./style/App.css";
+import { Form } from "./components/Form";
+import { RequestsBlock } from "./components/RequestsBlock";
 
 function App() {
+  // let variables = [];
+
+  // const url =
+  //   "https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/5UXWX7C5*BA?format=json";
+
+  // const getVariables = async () => {
+  //   await fetch(url)
+  //     .then((response) => response.json())
+  //     .then((json) => (variables = [...json.Results]));
+  //   console.log(variables);
+  // };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Form />
+      <RequestsBlock />
     </div>
   );
 }
