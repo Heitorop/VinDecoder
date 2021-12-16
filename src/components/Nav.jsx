@@ -22,9 +22,16 @@ export const Nav = () => {
 
   return (
     <nav>
-      <MyButton onClick={() => router("/")}>Form</MyButton>
-      <MyButton onClick={() => router("/variables")}>Variables</MyButton>
-      <MyButton disabled={int} onClick={() => router(`/variables/${value}`)}>
+      <MyButton className='nav-btn' onClick={() => router("/")}>
+        Form
+      </MyButton>
+      <MyButton className='nav-btn' onClick={() => router("/variables")}>
+        Variables
+      </MyButton>
+      <MyButton
+        className='nav-btn'
+        disabled={int}
+        onClick={() => router(`/variables/${value}`)}>
         Go to :{" "}
       </MyButton>
       <div className='nav__input-wrapper'>

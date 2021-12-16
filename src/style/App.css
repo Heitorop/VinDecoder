@@ -92,3 +92,11 @@ nav {
 .object__string {
   font-size: large;
 }
+
+@media (max-width: 570px) {
+  nav {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+  }
+}
