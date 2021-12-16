@@ -8,22 +8,40 @@
 #root {
   width: 100%;
   height: 100%;
+  display: flex;
 }
 .App {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 10px;
-  width: 100%;
+  margin: auto;
+  width: 800px;
+  min-width: 320px;
   height: 100%;
 }
 
-.form {
-  width: 500px;
-  min-width: 320px;
-  height: 300px;
+nav {
+  width: 100%;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 0 0 20px 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+  height: 300px;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -31,28 +49,46 @@
   border: 1px solid black;
   border-radius: 8px;
 }
-.form__btn {
-  width: 80px;
-  height: 30px;
-  margin-top: 20px;
-  border-radius: 4px;
-}
 
-.input {
-  line-height: 1.5rem;
-  border-radius: 4px;
-  border: 1px solid black;
-  padding: 4px 6px;
-  display: block;
-  width: 300px;
-  box-sizing: border-box;
+.form-btns__wrapper {
+  margin: 20px 0 0 0;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
 }
 .error {
   color: red;
 }
 
 .requestBlock {
-  width: 500px;
-  min-width: 320px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: auto;
+}
+
+.requestBlock__parameter {
+  width: 100%;
+  height: 20px;
+  border-bottom: 1px solid black;
+  background-color: rgb(216, 216, 216);
+  text-align: center;
+}
+
+.resultsOfUncoding {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+.object {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  height: 80px;
+}
+.object__string {
+  font-size: large;
 }

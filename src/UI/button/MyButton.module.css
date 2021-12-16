@@ -1,0 +1,11 @@
+/** @format */
+
+.btn {
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.btn:active {
+  background-color: rgb(170, 170, 170);
+}

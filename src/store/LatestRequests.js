@@ -34,6 +34,11 @@ class LatestRequests {
       }
     }
   }
+
+  clear = (e) => {
+    e.preventDefault();
+    localStorage.clear();
+  };
 }
 
 export default new LatestRequests();
