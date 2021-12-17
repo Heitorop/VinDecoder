@@ -1,18 +1,17 @@
 /** @format */
 
 import React, { useState } from "react";
-import MyButton from "../UI/button/MyButton";
-import { MyInput } from "../UI/input/MyInput";
 import { useNavigate } from "react-router-dom";
-import { setIn } from "formik";
+import MyButton from "../UI/button/MyButton";
+import MyInput from "../UI/input/MyInput";
 
-export const Nav = () => {
-  let router = useNavigate();
+const Nav = function () {
+  const router = useNavigate();
   const [value, setValue] = useState("");
   const [int, setInt] = useState(false);
 
-  function check(value) {
-    let v = Number(value);
+  function check(val) {
+    const v = Number(val);
     if (v < 0) {
       setInt(true);
     } else {
@@ -48,3 +47,5 @@ export const Nav = () => {
     </nav>
   );
 };
+
+export default Nav;

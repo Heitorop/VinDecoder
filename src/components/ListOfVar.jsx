@@ -2,16 +2,16 @@
 
 import React from "react";
 
-export const ListOfVar = ({ posts }) => {
-  return (
-    <div className='resultsOfUncoding'>
-      {posts.map((variable, i) => (
-        <div key={variable.VariableId + "-" + i} className='object'>
-          <p className='object__string'>
-            {variable.Variable} : {variable.Value}
-          </p>
-        </div>
-      ))}
-    </div>
-  );
-};
+const ListOfVar = ({ posts }) => (
+  <div className='resultsOfUncoding'>
+    {posts.map((varia) => (
+      <div key={`${varia.VariableId}-${Date.now()}`} className='object'>
+        <p className='object__string'>
+          {varia.Variable} : {varia.Value}
+        </p>
+      </div>
+    ))}
+  </div>
+);
+
+export default ListOfVar;

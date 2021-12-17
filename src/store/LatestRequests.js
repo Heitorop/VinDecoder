@@ -24,19 +24,7 @@ class LatestRequests {
     }
   }
 
-  autoRender() {
-    if (localStorage.length !== 0) {
-      for (let i = 0; i < localStorage.length; i++) {
-        this.requests.push({
-          key: localStorage.key(i),
-          request: localStorage.getItem("request " + i),
-        });
-      }
-    }
-  }
-
-  clear = (e) => {
-    e.preventDefault();
+  clear = () => {
     localStorage.clear();
   };
 }

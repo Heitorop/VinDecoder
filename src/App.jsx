@@ -1,11 +1,12 @@
 /** @format */
 
-import "./style/App.css";
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { AppRouter } from "./components/AppRouter";
-import { Nav } from "./components/Nav";
+import AppRouter from "./components/AppRouter";
+import Nav from "./components/Nav";
+import "./style/App.css";
 
-function App() {
+const App = function () {
   return (
     <div className='App'>
       <Router>
@@ -14,6 +15,6 @@ function App() {
       </Router>
     </div>
   );
-}
+};
 
 export default App;

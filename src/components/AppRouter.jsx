@@ -2,26 +2,17 @@
 
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Form } from "./Form";
-import { VariablesDescription } from "./VariablesDescription";
-import { VariablesDescriptionByID } from "./VariablesDescriptionByID";
+import Form from "./Form";
+import VariablesDescription from "./VariablesDescription";
+import VariablesDescriptionByID from "./VariablesDescriptionByID";
 
-export const AppRouter = () => {
+const AppRouter = function () {
   return (
     <Routes>
-      <Route exact={true} path='/' element={<Form />} />
+      <Route exact path='/' element={<Form />} />
+      <Route exact path='/variables' element={<VariablesDescription />} />
       <Route
-        exact={true}
-        path='/variables'
-        element={<VariablesDescription />}
-      />
-      <Route
-        exact={true}
-        path='/variables'
-        element={<VariablesDescription />}
-      />
-      <Route
-        exact={true}
+        exact
         path='/variables/:id'
         element={<VariablesDescriptionByID />}
       />
@@ -29,3 +20,5 @@ export const AppRouter = () => {
     </Routes>
   );
 };
+
+export default AppRouter;

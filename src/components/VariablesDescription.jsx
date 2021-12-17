@@ -1,24 +1,17 @@
 /** @format */
 
-import React, { useState, useEffect } from "react";
-import VariablesService from "../API/VariablesService";
-import { useFetching } from "../hooks/useFetching";
+import React, { useEffect } from "react";
+import { observer } from "mobx-react-lite";
+import { fetchDescription } from "../API/fetchDescription";
+import descr from "../store/VariablesStore.js";
 
-export const VariablesDescription = () => {
-  const [description, setDescription] = useState([]);
-
-  const [fetchDescription, varErrorD] = useFetching(async () => {
-    const response = await VariablesService.getDescription();
-    setDescription(response.data.Results);
-    console.log(description);
-  });
-
+const VariablesDescription = observer(() => {
   useEffect(() => {
     fetchDescription();
   }, []);
   return (
     <div className='resultsOfUncoding'>
-      {description.map((variable, i) => (
+      {descr.description.map((variable) => (
         <div key={variable.ID} className='object'>
           <p className='object__string'>DataType : {variable.DataType}</p>
           <p className='object__string'>GroupName : {variable.GroupName}</p>
@@ -30,4 +23,6 @@ export const VariablesDescription = () => {
       ))}
     </div>
   );
-};
+});
+
+export default VariablesDescription;
