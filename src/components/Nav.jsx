@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import MyButton from "../UI/button/MyButton";
 import MyInput from "../UI/input/MyInput";
 
-const Nav = function () {
+const Nav = () => {
   const router = useNavigate();
   const [value, setValue] = useState("");
   const [int, setInt] = useState(false);

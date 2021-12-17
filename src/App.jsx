@@ -6,7 +6,7 @@ import AppRouter from "./components/AppRouter";
 import Nav from "./components/Nav";
 import "./style/App.css";
 
-const App = function () {
+const App = () => {
   return (
     <div className='App'>
       <Router>

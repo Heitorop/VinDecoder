@@ -5,7 +5,7 @@ import { useParams } from "react-router";
 import { fetchDescription } from "../API/fetchDescription";
 import descr from "../store/VariablesStore.js";
 
-const VariablesDescriptionByID = function () {
+const VariablesDescriptionByID = () => {
   const params = useParams();
 
   useEffect(() => {

@@ -6,7 +6,7 @@ import Form from "./Form";
 import VariablesDescription from "./VariablesDescription";
 import VariablesDescriptionByID from "./VariablesDescriptionByID";
 
-const AppRouter = function () {
+const AppRouter = () => {
   return (
     <Routes>
       <Route exact path='/' element={<Form />} />

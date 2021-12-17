@@ -28,7 +28,6 @@ const Form = observer(() => {
     vari.setValueOfInput(inputVal);
     fetchPosts();
   };
-  console.log(vari.variables);
   return (
     <>
       <form className='form' onSubmit={handleSubmit(onSubmit)}>
