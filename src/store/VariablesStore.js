@@ -5,6 +5,7 @@ import { makeAutoObservable } from "mobx";
 class VariablesStore {
   inputV = "";
   variables = [];
+  variLoading = false;
   varError = "";
   description = [];
   descError = "";

@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { fetchDescription } from "../API/fetchDescription";
 import descr from "../store/VariablesStore.js";
+import MyLoader from "../UI/loader/MyLoader";
 
 const VariablesDescription = observer(() => {
   useEffect(() => {
@@ -11,6 +12,7 @@ const VariablesDescription = observer(() => {
   }, []);
   return (
     <div className='resultsOfUncoding'>
+      {descr.variLoading && <MyLoader />}
       {descr.description.map((variable) => (
         <div key={variable.ID} className='object'>
           <p className='object__string'>DataType : {variable.DataType}</p>

@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { useForm } from "react-hook-form";
 import RequestsBlock from "./RequestsBlock";
@@ -10,6 +10,7 @@ import MyButton from "../UI/button/MyButton.jsx";
 import MyInput from "../UI/input/MyInput";
 import vari from "../store/VariablesStore.js";
 import { fetchPosts } from "../API/fetchDescription";
+import MyLoader from "../UI/loader/MyLoader";
 
 const Form = observer(() => {
   const {
@@ -23,11 +24,16 @@ const Form = observer(() => {
     setInputVal(e.target.value);
   };
 
+  useEffect(() => {
+    req.clear();
+  }, []);
+
   const onSubmit = (request) => {
     req.addRequest(request.vin);
     vari.setValueOfInput(inputVal);
     fetchPosts();
   };
+
   return (
     <>
       <form className='form' onSubmit={handleSubmit(onSubmit)}>
@@ -54,6 +60,7 @@ const Form = observer(() => {
           </MyButton>
         </div>
       </form>
+      {vari.variLoading && <MyLoader />}
       <RequestsBlock setInputVal={setInputVal} />
       {vari.varError && <h2>Error</h2>}
       <ListOfVar posts={vari.variables} />
