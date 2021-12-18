@@ -55,9 +55,6 @@ const Form = observer(() => {
         )}
         <div className='form-btns__wrapper'>
           <MyButton type='submit'>Send</MyButton>
-          <MyButton type='button' onClick={(e) => req.clear(e)}>
-            Clear history
-          </MyButton>
         </div>
       </form>
       {vari.variLoading && <MyLoader />}
