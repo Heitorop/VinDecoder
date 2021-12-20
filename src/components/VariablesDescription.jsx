@@ -14,11 +14,17 @@ const VariablesDescription = observer(() => {
     <div className='resultsOfUncoding'>
       {descr.variLoading && <MyLoader />}
       {descr.description.map((variable) => (
-        <div key={variable.ID} className='object'>
-          <p className='object__string'>DataType : {variable.DataType}</p>
-          <p className='object__string'>GroupName : {variable.GroupName}</p>
-          <p className='object__string'>ID :{variable.ID}</p>
-          <p className='object__string'>
+        <div key={variable.ID} className='resultsOfUncoding__component'>
+          <p className='resultsOfUncoding__component-string'>
+            DataType : {variable.DataType}
+          </p>
+          <p className='resultsOfUncoding__component-string'>
+            GroupName : {variable.GroupName}
+          </p>
+          <p className='resultsOfUncoding__component-string'>
+            ID :{variable.ID}
+          </p>
+          <p className='resultsOfUncoding__component-string'>
             <b>Name :</b> {variable.Name}
           </p>
         </div>

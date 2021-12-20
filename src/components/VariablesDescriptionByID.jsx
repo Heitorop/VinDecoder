@@ -18,11 +18,17 @@ const VariablesDescriptionByID = () => {
       {descr.description.map((variable) => (
         <div key={variable.ID}>
           {variable.ID.toString() === params.id && (
-            <div className='object' key={variable.ID}>
-              <p className='object__string'>DataType : {variable.DataType}</p>
-              <p className='object__string'>GroupName : {variable.GroupName}</p>
-              <p className='object__string'>ID :{variable.ID}</p>
-              <p className='object__string'>
+            <div className='resultsOfUncoding__component' key={variable.ID}>
+              <p className='resultsOfUncoding__component-string'>
+                DataType : {variable.DataType}
+              </p>
+              <p className='resultsOfUncoding__component-string'>
+                GroupName : {variable.GroupName}
+              </p>
+              <p className='resultsOfUncoding__component-string'>
+                ID :{variable.ID}
+              </p>
+              <p className='resultsOfUncoding__component-string'>
                 <b>Name :</b> {variable.Name}
               </p>
             </div>

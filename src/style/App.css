@@ -84,17 +84,22 @@ nav {
   flex-direction: column;
   justify-content: center;
 }
-.object {
+.resultsOfUncoding__component {
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: 1px solid black;
   height: 80px;
 }
-.object__string {
+.resultsOfUncoding__component-string {
   font-size: large;
 }
 
+@media (max-width: 610px) {
+  .resultsOfUncoding__component {
+    height: 100%;
+  }
+}
 @media (max-width: 570px) {
   nav {
     flex-direction: column;
